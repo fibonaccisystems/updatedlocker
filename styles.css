@@ -1,0 +1,131 @@
+/* Base styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Styling the main locker container */
+  #scratchCardContainer {
+    display: none;  /* Initially hidden */
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Smooth fade-in transition */
+  }
+  
+  /* Make it visible when we add the fade-in class */
+  #scratchCardContainer.show {
+    display: block;
+    opacity: 1;
+  }
+  
+  /* Styling the offers */
+  .offers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .offer img {
+    width: 100%; /* Make the image responsive */
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .offer-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .offer-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styling for the complete message and redirect button */
+  #completeMessage {
+    margin-top: 20px;
+    display: none;
+  }
+  
+  #redirectButton {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    font-size: 16px;
+  }
+  
+  #redirectButton.active {
+    opacity: 1;
+  }
+  
+  #redirectButton:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    /* For tablets and mobile devices */
+    .offer img {
+      width: 90%;  /* Adjust image width for smaller screens */
+    }
+  
+    .offer-link {
+      font-size: 14px; /* Slightly smaller font size for links on mobile */
+    }
+  
+    #scratchCardContainer {
+      padding: 20px; /* Less padding on mobile */
+      width: 90%; /* Make the container fit better on small screens */
+    }
+  
+    #redirectButton {
+      width: 100%; /* Make button full width on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* For smaller mobile devices */
+    .offer img {
+      width: 100%;  /* Adjust image to be fully responsive */
+    }
+  
+    .offer-link {
+      font-size: 12px;  /* Smaller font size for mobile links */
+    }
+  
+    #scratchCardContainer {
+      padding: 15px; /* Less padding on very small screens */
+      width: 95%; /* Further adjust container width */
+    }
+  
+    #redirectButton {
+      padding: 12px 0; /* Adjust button padding on small screens */
+    }
+  }  
