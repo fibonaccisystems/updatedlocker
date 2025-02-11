@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>500€ Gutschein Locker</title>
+  <title>Erhalte deinen Geschenkgutschein</title>
   
   <style>
     /* Styling as before */
@@ -115,12 +115,14 @@
     #redirectButton:hover {
       background-color: #2980b9;
     }
-
   </style>
 </head>
 
 <body>
   <div id="lockerWrapper">
+    <!-- Add image above the header -->
+    <img src="https://i.imgur.com/Z7scVwl.png" alt="Banner Image" style="width: 100%; border-radius: 12px; margin-bottom: 20px;">
+
     <h1>🎉 Glückwunsch! Dein 500€ Gutschein wartet auf dich!</h1>
     <p>Um deinen Gutschein zu erhalten, wähle bitte <b>1 der folgenden Angebote</b> aus und schließe sie ab:</p>
     
@@ -149,14 +151,14 @@
 
     <div id="completeMessage">
       <p>✅ Du hast die erforderlichen Angebote abgeschlossen!</p>
-      <button id="redirectButton" onclick="redirectToFinalPage()">Weiter zu deinem Zara-Gutschein</button>
+      <button id="redirectButton" onclick="redirectToFinalPage()">Weiter zu deinem Gutschein</button>
     </div>
   </div>
 
   <script>
     let completedOffers = 0;
-    const requiredOffers = 1;  // Minimum offers to complete
-    let clickedOffers = [false, false, false]; // Track if offers were opened in new tab
+    const requiredOffers = 1;  // Minimum offers to complete set to 1
+    let clickedOffers = [false, false, false]; // Track if offers were opened in a new tab
 
     // Mark an offer as completed
     function completeOffer(offerNumber) {
@@ -188,7 +190,7 @@
       }
     }
 
-    // Redirect to the final page (Zara 500€ URL)
+    // Redirect to the final page
     function redirectToFinalPage() {
       window.location.href = "https://www.totaltr4ffic.com/41LGZKT/2KPD99NK/"; // Replace with the actual link
     }
